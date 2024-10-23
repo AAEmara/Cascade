@@ -4,7 +4,7 @@
 
 ### Document: User
 | Field          | Type               | Description                             | Required | Note
-| -------------- | ------------------ | --------------------------------------- | -------- | ----
+| -------------- | ------------------ | --------------------------------------- | -------- | ------------------------- |
 | `_id`          | `ObjectId`         | Unique identifier                       | Yes      | Auto-generated            |
 | `firstName`    | `String`           | User's first name                       | Yes      |                           |
 | `lastName`     | `String`           | User's last name                        | Yes      |                           |
