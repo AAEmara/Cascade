@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Specifying the command that would run our application
-CMD ["node", "server.js"]
+CMD ["npx", "nodemon", "server.js"]
