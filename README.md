@@ -1,10 +1,10 @@
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB) [![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)] ![Open Source Love Badge](https://badges.frapsoft.com/os/v1/open-source.svg?v=103) ![MIT License Badge](https://img.shields.io/badge/license-MIT-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white) ![Open Source Love Badge](https://badges.frapsoft.com/os/v1/open-source.svg?v=103) ![MIT License Badge](https://img.shields.io/badge/license-MIT-green)
 # Cascade
 
 **“Where Everyone Communicates and Performs”**
 ## Table of Contents
 - [Introduction](#introduction)
-- [Technologies Used] (#technologies-used)
+- [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation Instructions](#installation-instructions)
 - [Usage](#usage)
