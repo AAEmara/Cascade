@@ -1,16 +1,28 @@
 version: '3.8'
 
 services:
-  server:
+  server_dev:
     build: ./server
     ports:
       - "5000:5000"
     volumes:
       - ./server:/usr/src/app
     env_file:
-      - ./server/.env
+      - ./server/.env.development
     depends_on:
       - mongo
+
+  server_test:
+    build: ./server
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./server:/user/src/app
+    env_file:
+      - ./server/.env.test
+    depends_on:
+      - mongo
+    command: ["npm", "test"]
 
   mongo:
     image: mongo:8.0
