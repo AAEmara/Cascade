@@ -331,7 +331,7 @@ router.delete('/companies/:companyId',
  *                 type: string
  *                 description: The name of the department
  *                 example: "Human Resources"
- *               users:
+ *               roles:
  *                 type: array
  *                 items:
  *                   type: object

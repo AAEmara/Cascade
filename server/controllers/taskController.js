@@ -64,7 +64,6 @@ class TaskController {
   static async getRoleTask (req, res) {
     // Retrieves a task for a certain role
     const { roleId, taskId } = req.params;
-    console.log(taskId);
     try {
       const task = await Task.findById(taskId);
       if (!task) {

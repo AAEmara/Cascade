@@ -1,5 +1,6 @@
 import Role from '../models/Roles.js';
 import User from '../models/Users.js';
+import Department from '../models/Departments.js';
 
 /**
  *
@@ -40,6 +41,15 @@ class RoleController {
     const roleData = req.body;
     try {
       // Create Role inside the department
+      const department = await Department.findById(departmentId);
+      if (!department) {
+        return res.status(404).json({
+          status: 'error',
+          message: 'Department not found.',
+          error: 'Invalid department ID.'
+        });
+      }
+      const companyId = department.companyId;
       const role = new Role(roleData);
       const savedRole = await role.save();
 
@@ -55,7 +65,7 @@ class RoleController {
         }
         // Add the role to the user's companyRoles array
         user.companyRoles.push({
-          companyId: roleData.companyId, departmentId, roleId: savedRole._id
+          companyId, departmentId, roleId: savedRole._id
         });
         await user.save();
       }

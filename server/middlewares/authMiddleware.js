@@ -65,15 +65,12 @@ class AuthMiddleware {
           error: 'Department ID is not valid'
         });
       }
-      console.log(department);
       const companyId = department.companyId;
-      console.log(companyId);
       const user = await User.findById(req.user._id).populate('companyRoles.roleId');
       const isAdmin = user.companyRoles.some(role => {
         return (role.companyId.equals(companyId) &&
         role.roleId.hierarchyLevel === 'COMPANY_ADMIN');
       });
-      console.log(isAdmin);
 
       if (!isAdmin) {
         return res.status(403).json({

@@ -38,14 +38,12 @@ const upload = multer({ storage: multer.memoryStorage() });
  *           schema:
  *             type: object
  *             properties:
- *               objectiveId:
- *                 type: string
  *               title:
  *                 type: string
+ *                 example: "Create 3 different IT JD urgently!"
  *               description:
  *                 type: string
- *               taskRubric:
- *                 type: string
+ *                 example: "Create three different IT Job Descriptions and send their documents"
  *               startDate:
  *                 type: string
  *                 format: date-time
@@ -58,6 +56,7 @@ const upload = multer({ storage: multer.memoryStorage() });
  *                   type: string
  *               priority:
  *                 type: string
+ *                 example: "HIGH"
  *     responses:
  *       201:
  *         description: Task created successfully
@@ -942,14 +941,19 @@ router.delete('/roles/:roleId/tasks/:taskId/resources/:fileName',
  *           type: string
  *         required: true
  *         description: Task ID
- *       - in: formData
- *         name: files
- *         type: array
- *         items:
- *           type: string
- *           format: binary
- *         required: true
- *         description: Files to upload
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               files:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: binary
+ *                 description: Array of files to upload
  *     responses:
  *       200:
  *         description: Files uploaded successfully.

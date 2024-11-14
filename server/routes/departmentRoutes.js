@@ -39,11 +39,16 @@ const router = express.Router();
  *               - userId
  *               - jobTitle
  *               - jobDescription
+ *               - hierarchyLevel
  *             properties:
  *               departmentId:
  *                 type: string
  *                 description: The ID of the department
  *                 example: "60d21b4667d0d8992e610c87"
+ *               hierarchyLevel:
+ *                 type: string
+ *                 description: The hierarchy of the role
+ *                 example: "MANAGER"
  *               userId:
  *                 type: string
  *                 description: The ID of the user
@@ -56,6 +61,7 @@ const router = express.Router();
  *                 type: string
  *                 description: A description to what is expected and required
  *                              from this role
+ *                 example: "This is a Human Resources Specialist"
  *               supervisedBy:
  *                 type: array
  *                 items:
@@ -65,8 +71,7 @@ const router = express.Router();
  *                   example: "60d21b4667d0d8992e610c87" 
  *                 description: Array of role IDs that supervises this role
  *                 default: []
- *                 example: ["60d21b4667d0d8992e610c87",
- *                           "60d21b4667d0d8992e610c88"]
+ *                 example: ["60d21b4667d0d8992e610c87"]
  *               supervises:
  *                 type: array
  *                 items:
@@ -77,16 +82,7 @@ const router = express.Router();
  *                 description: Array of role IDs that are supervised by this
  *                              role
  *                 default: []
- *                 example: ["60d21b4667d0d8992e610c87",
- *                           "60d21b4667d0d8992e610c88"]
- *               createdAt:
- *                 type: Date
- *                 description: The creation date of the role
- *                 example: 2024-11-01T00:00:00Z
- *               updatedAt:
- *                 type: Date
- *                 description: The update date of the role's information
- *                 example: 2024-11-06T03:21:36.046Z
+ *                 example: ["60d21b4667d0d8992e610c87"]
  *     responses:
  *       '201':
  *         description: Role created successfully
